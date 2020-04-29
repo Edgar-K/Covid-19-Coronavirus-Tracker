@@ -1,11 +1,13 @@
 # [Covid-19-Coronavirus-Tracker](https://e-covid19-tracker.netlify.app)
 
 ### Description
-The project is going to fetch the live data from the API using Async/Await syntax. In this project,I have created a COVID-19 Tracker/Stats Application using React with the addition of Charts.js, Material UI, and many different modules.
+The project is going to fetch the live data from the API using Async/Await syntax. In this project I have created a COVID-19 Tracker/Stats Application using React with the addition of Charts.js, Material UI, and many different modules.
 -----
 
-###  Demo
+### Demo Coronavirus Cases: Global 
 ![DemoPicture](https://github.com/Edgar-K/Covid-19-Coronavirus-Tracker/blob/master/public/img/Demo1.png?raw=true)
+
+### Demo Coronavirus Cases: Country
 ![DemoPicture2](https://github.com/Edgar-K/Covid-19-Coronavirus-Tracker/blob/master/public/img/Demo2.png?raw=true)
 
 -----
@@ -26,6 +28,6 @@ The project is going to fetch the live data from the API using Async/Await synta
 4. ```npm install --save @material-ui/core```
 5. ```npm install --save axios```
 6. ```npm install --save react-chartjs-2```
-7. ```npm install --save react-countup classnames```
+7. ```npm install --save react-countup ```
 8. ```npm install --save classnames```
 9. ```npm start```
