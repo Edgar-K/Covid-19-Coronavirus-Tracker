@@ -1,6 +1,7 @@
 # [Covid-19-Coronavirus-Tracker](https://e-covid19-tracker.netlify.app)
 
 ### Description
+
 The project is going to fetch the live data from the API using Async/Await syntax. In this project I have created a COVID-19 Tracker/Stats Application using React with the addition of Charts.js, Material UI, and many different modules.
 -----
 

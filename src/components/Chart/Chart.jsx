@@ -17,10 +17,10 @@ const Chart = ({ data:{ confirmed, recovered, deaths }, country }) => {
         fetchAPI();
     }, []);
 
-    const lineChart = (
+    const lineChart = ( 
         dailyData.length
             ? (
-                <Line
+                <Line 
                     data={{
                         labels: dailyData.map(({ date }) => date),
                         datasets: [{
@@ -37,12 +37,14 @@ const Chart = ({ data:{ confirmed, recovered, deaths }, country }) => {
                         }],
                     }}
                 />) : null
+
+                
     );
 
     const barChart = (
         confirmed
             ? (
-                <Bar
+                <Bar 
                     data={{
                         labels: ['Infected', 'Recovered', 'Deaths'],
                         datasets: [{

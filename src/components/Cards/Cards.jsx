@@ -11,7 +11,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         return 'Loading...';
     }
     return (
-        <div className={styles.container}>
+        <div className={styles.container} data-testid='chart-bar' >
             <Grid container spacing={3} justify="center">
 
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)}>
