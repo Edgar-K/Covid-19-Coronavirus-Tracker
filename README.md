@@ -26,9 +26,4 @@ The project is going to fetch the live data from the API using Async/Await synta
 1. Clone the repository ```https://github.com/Edgar-K/Covid-19-Coronavirus-Tracker.git```
 2. ```cd ``` into the project folder
 3. ```npm install```
-4. ```npm install --save @material-ui/core```
-5. ```npm install --save axios```
-6. ```npm install --save react-chartjs-2```
-7. ```npm install --save react-countup ```
-8. ```npm install --save classnames```
-9. ```npm start```
+4. ```npm start```
