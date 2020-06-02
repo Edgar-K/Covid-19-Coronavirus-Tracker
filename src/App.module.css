@@ -1,5 +1,9 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-image: url(./img/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 
 .container {
@@ -13,12 +17,10 @@ body {
     margin-top: 0px;
 }
 
-
 @media (max-width:770px) {
-    .container{
+    .container {
         margin: 0 10%;
     }
-
     .image {
         width: 100%;
     }
