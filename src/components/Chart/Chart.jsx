@@ -44,15 +44,16 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
             ? (
                 <Bar
                     data={{
-                        labels: ['Infected', 'Recovered', 'Deaths'],
+                        labels: ['Infected', 'Recovered', 'Deaths', 'Active'],
                         datasets: [{
                             label: 'People',
                             backgroundColor: [
                                 'rgba(0, 0, 255, 0.8)',
                                 'rgba(0, 255, 0, 0.8)',
                                 'rgba(255, 0, 0, 0.8)',
+                                'rgba(255, 74, 0, 0.8)',
                             ],
-                            data: [confirmed.value, recovered.value, deaths.value,]
+                            data: [confirmed.value, recovered.value, deaths.value, confirmed.value - recovered.value - deaths.value]
                         }]
                     }}
                     options={{
