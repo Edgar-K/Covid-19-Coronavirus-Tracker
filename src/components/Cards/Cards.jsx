@@ -6,7 +6,7 @@ import cx from 'classnames';
 
 
 
-const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
+const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate,activeCases } }) => {
     if (!confirmed) {
         return 'Loading...';
     }
@@ -14,7 +14,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         <div className={styles.container} data-testid='chart-bar' >
             <Grid container spacing={3} justify="center">
 
-                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)}>
+                <Grid item component={Card} xs={12} md={2} className={cx(styles.card, styles.infected)}>
                     <CardContent>
                         <Typography color="textSecondary" variant="h5" gutterBottom >Infected</Typography>
                         <Typography variant="h5">
@@ -25,7 +25,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                     </CardContent>
                 </Grid>
 
-                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.recovered)}>
+                <Grid item component={Card} xs={12} md={2} className={cx(styles.card, styles.recovered)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom variant="h5" >Recovered</Typography>
                         <Typography variant="h5">
@@ -36,7 +36,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                     </CardContent>
                 </Grid>
 
-                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.deaths)}>
+                <Grid item component={Card} xs={12} md={2} className={cx(styles.card, styles.deaths)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom variant="h5" >Deaths</Typography>
                         <Typography variant="h5">
@@ -46,6 +46,18 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                         <Typography vatiant="body2">Number of deaths caused by COVID-19 </Typography>
                     </CardContent>
                 </Grid>
+
+                <Grid item component={Card} xs={12} md={2} className={cx(styles.card, styles.active)}>
+                    <CardContent>
+                        <Typography color="textSecondary" gutterBottom variant="h5" >Active Cases</Typography>
+                        <Typography variant="h5">
+                            <CountUp start={0} end={confirmed.value - recovered.value - deaths.value} duration={2.5} separator=","/>
+                        </Typography>
+                        <Typography color="textSecondary"> {new Date(lastUpdate).toDateString()} </Typography>
+                        <Typography vatiant="body2">Number of active cases by COVID-19 </Typography>
+                    </CardContent>
+                </Grid>
+                
 
             </Grid>
         </div>
